@@ -3,7 +3,7 @@ import './FicheLogement.scss'
 import logementsData from '../../data/logements.json'
 import { Logement } from '../../type'
 import Carousel from '../../components/Carousel/Carousel'
-import Accordion from '../../components/Accordion/Accordion'
+// import Accordion from '../../components/Accordion/Accordion'
 
 function getLogement(
   logements: Logement[],
@@ -20,7 +20,7 @@ function FicheLogement() {
   const logement = getLogement(logementsData, logementId)
 
   return logement ? (
-    <div id='fiche-logement'>
+    <div id="fiche-logement">
       <Carousel pictures={logement.pictures} />
       <div>{logement.title}</div>
       <div>{logement.description}</div>

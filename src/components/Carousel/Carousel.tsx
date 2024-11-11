@@ -16,12 +16,14 @@ function Carousel({ pictures }: CarouselProps) {
   return (
     <div id="carousel">
       <img src={pictures[index]} alt="Images du logement" />
-      <button className="previous" onClick={previousImage}>
-        précédent
-      </button>
-      <button className="next" onClick={nextImage}>
-        suivant
-      </button>
+      <button
+        className="previous fa-solid fa-chevron-left"
+        onClick={previousImage}
+      ></button>
+      <button
+        className="next fa-solid fa-chevron-right"
+        onClick={nextImage}
+      ></button>
       <div className="index">
         {index + 1}/{pictures.length}
       </div>
