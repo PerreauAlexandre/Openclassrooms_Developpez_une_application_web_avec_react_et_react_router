@@ -1,0 +1,64 @@
+@use '../../Variables.scss' as *;
+
+.accordion {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+
+  &.large {
+    h3 {
+      font-size: 24px;
+      font-weight: 700;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+
+  &.medium {
+    h3 {
+      font-size: 18px;
+      font-weight: 700;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $colour-primary;
+    height: 52px;
+    padding: 0 20px 0 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+
+    .chevron {
+      transition: transform 0.3s ease-out;
+
+      &.open {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  .accordion-content {
+    overflow: hidden;
+    background-color: #f9f9f9;
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px;
+    max-height: 0px;
+    transition: all 0.4s ease-out;
+
+    &.open {
+      padding: 20px;
+      max-height: 1000px;
+    }
+  }
+}
