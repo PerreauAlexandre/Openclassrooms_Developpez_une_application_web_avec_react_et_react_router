@@ -1,3 +1,90 @@
+@use '../../Variables.scss' as *;
+
 #fiche-logement {
   padding: 50px 100px;
+
+  .logement-header {
+    display: flex;
+    justify-content: space-between;
+
+    .title-and-tags {
+      max-width: 65%;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .title-and-location {
+        .title {
+          font-size: 36px;
+          font-weight: 500;
+          color: $colour-primary;
+        }
+
+        .location {
+          font-size: 18px;
+          font-weight: 500;
+        }
+      }
+
+      .tags {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .tag {
+          min-width: 115px;
+          height: 25px;
+          padding: 0 10px;
+          list-style: none;
+          font-size: 14px;
+          font-weight: 700;
+          color: #ffffff;
+          background-color: $colour-primary;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+
+    .host-and-rating {
+      max-width: 35%;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: end;
+
+      .host {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+
+        &-name {
+          width: 93px;
+          font-size: 18px;
+          font-weight: 500;
+          color: $colour-primary;
+        }
+
+        &-picture {
+          width: 64px;
+          height: 64px;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .accordions {
+    margin-top: 20px;
+    display: flex;
+    gap: 75px;
+  }
 }

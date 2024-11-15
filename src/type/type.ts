@@ -13,13 +13,3 @@ export type Logement = {
   equipments: string[]
   tags: string[]
 }
-
-export type AccordionProps = {
-  title: string
-  content: string[]
-  accordionLarge: boolean
-}
-
-export type CarouselProps = {
-  pictures: string[]
-}

@@ -1,6 +1,11 @@
 import { useState } from 'react'
 import './Accordion.scss'
-import { AccordionProps } from '../../type'
+
+type AccordionProps = {
+  title: string
+  content: string[] | string
+  accordionLarge: boolean
+}
 
 function Accordion({ title, content, accordionLarge }: AccordionProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -18,9 +23,11 @@ function Accordion({ title, content, accordionLarge }: AccordionProps) {
         ></i>
       </div>
       <div className={`accordion-content ${isOpen ? 'open' : ''}`}>
-        {content.map((line, index) => (
-          <p key={index}>{line}</p>
-        ))}
+        {typeof content === 'string' ? (
+          <p>{content}</p>
+        ) : (
+          content.map((line, index) => <p key={index}>{line}</p>)
+        )}
       </div>
     </div>
   )

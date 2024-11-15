@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import './Carousel.scss'
-import { CarouselProps } from '../../type'
+
+type CarouselProps = {
+  pictures: string[]
+}
 
 function Carousel({ pictures }: CarouselProps) {
   const [index, setIndex] = useState<number>(0)

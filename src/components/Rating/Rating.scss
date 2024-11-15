@@ -1,0 +1,14 @@
+@use '../../Variables.scss' as *;
+
+#rating {
+  font-size: 24px;
+
+  .star {
+    width: 36px;
+    color: #e3e3e3;
+
+    &.filled {
+      color: $colour-primary;
+    }
+  }
+}

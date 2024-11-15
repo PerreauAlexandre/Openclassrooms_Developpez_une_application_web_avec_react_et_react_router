@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import './Home.scss'
 import logementsData from '../../data/logements.json'
-import { Logement } from '../../type'
+import { Logement } from '../../type/type'
 
 function Home() {
   const logements: Logement[] = logementsData
@@ -13,7 +13,7 @@ function Home() {
         {logements.map((logement) => (
           <li key={logement.id} className="card">
             <Link to={`/fiche-logement/${logement.id}`}>
-              <div className='card-image'>
+              <div className="card-image">
                 <img src={logement.cover} alt={logement.title} />
               </div>
               <div className="title">{logement.title}</div>
