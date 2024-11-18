@@ -6,22 +6,38 @@
   overflow: hidden;
 
   &.large {
-    h3 {
+    h3, i {
       font-size: 24px;
       font-weight: 700;
+
+      @media screen and (max-width: 768px) {
+        font-size: 13px;
+      }
     }
     p {
       font-size: 18px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 12px;
+      }
     }
   }
 
   &.medium {
-    h3 {
+    h3, i {
       font-size: 18px;
       font-weight: 700;
+
+      @media screen and (max-width: 768px) {
+        font-size: 13px;
+      }
     }
     p {
       font-size: 18px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 12px;
+      }
     }
   }
 
@@ -35,6 +51,10 @@
     border-radius: 5px;
     cursor: pointer;
     color: white;
+
+    @media screen and (max-width: 768px) {
+      height: 30px;
+    }
 
     .chevron {
       transition: transform 0.3s ease-out;
@@ -51,13 +71,17 @@
     border-radius: 0 0 5px 5px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
     padding: 0 20px;
     max-height: 0px;
     transition: all 0.4s ease-out;
 
+    @media screen and (max-width: 768px) {
+      gap: 3.5px;
+    }
+
     &.open {
-      padding: 20px;
+      padding: 10px 20px 20px 20px;
       max-height: 1000px;
     }
   }

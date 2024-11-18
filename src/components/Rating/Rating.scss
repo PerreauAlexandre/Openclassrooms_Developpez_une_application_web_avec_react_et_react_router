@@ -3,9 +3,17 @@
 #rating {
   font-size: 24px;
 
+  @media screen and (max-width: 768px) {
+    font-size: 13px;
+  }
+
   .star {
     width: 36px;
     color: #e3e3e3;
+
+    @media screen and (max-width: 768px) {
+      width: 18px;
+    }
 
     &.filled {
       color: $colour-primary;

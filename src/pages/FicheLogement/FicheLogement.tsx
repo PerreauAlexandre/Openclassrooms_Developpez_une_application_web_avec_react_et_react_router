@@ -19,8 +19,11 @@ function FicheLogement() {
     return <Navigate to="/error" replace={true} />
   }
   const logement = getLogement(logementsData, logementId)
+  if (!logement) {
+    return <Navigate to="/error" replace={true} />
+  }
 
-  return logement ? (
+  return (
     <div id="fiche-logement">
       <Carousel pictures={logement.pictures} />
       <div className="logement-header">
@@ -62,8 +65,6 @@ function FicheLogement() {
         />
       </div>
     </div>
-  ) : (
-    <Navigate to="/error" replace={true} />
   )
 }
 
