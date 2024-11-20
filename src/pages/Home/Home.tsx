@@ -8,7 +8,9 @@ function Home() {
 
   return (
     <div className="home-main-section">
-      <div className="banner">Chez vous, partout et ailleurs</div>
+      <div className="banner">
+        <p>Chez vous, partout et ailleurs</p>
+      </div>
       <ul className="card-section">
         {logements.map((logement) => (
           <li key={logement.id} className="card">

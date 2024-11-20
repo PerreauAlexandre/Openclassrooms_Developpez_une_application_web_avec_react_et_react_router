@@ -5,7 +5,7 @@ type RatingProps = {
 }
 
 function Rating({ rating }: RatingProps) {
-  const intRating = parseInt(rating, 10)
+  const intRating: number = parseInt(rating, 10)
   const stars = []
   for (let i = 0; i < 5; i++) {
     stars.push(
